@@ -5,9 +5,9 @@ interface IPost extends Document {
   body: string;
   author: Schema.Types.ObjectId;
   likes?: number;
+  category: Schema.Types.ObjectId;
+  tags: Schema.Types.ObjectId[];
   comments?: Schema.Types.ObjectId[];
-  tags?: Schema.Types.ObjectId[];
-  category?: Schema.Types.ObjectId;
   published: boolean;
 }
 

@@ -1,0 +1,48 @@
+Models:
+============
+
+1. users
+    - name
+    - email (required, unique)
+    - password (required)
+    - posts
+    - comments
+    - roles
+    - profile
+        -> bio
+        -> avatar
+    - createdAt
+    - updatedAt
+
+2. categories
+    - name (required, unique)
+    - description
+    - createdAt
+    - updatedAt
+
+3. tags
+    - name (required, unique)
+    - description
+    - createdAt
+    - updatedAt
+
+4. posts
+    - title (required)
+    - body (required)
+    - author (required)
+    - likes
+    - category (required)
+    - tags (required)
+    - comments
+    - published (required)
+    - createdAt
+    - updatedAt
+
+5. comments
+    - postId (required)
+    - parentCommentId
+    - author (required)
+    - email (required)
+    - content (required)
+    - createdAt
+    - updatedAt
