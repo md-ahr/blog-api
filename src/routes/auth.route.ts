@@ -1,15 +1,11 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+
+import { login, register } from '@controllers/auth.controller';
 
 const router = express.Router();
 
-router.get('/register', (req: Request, res: Response) => {
-  console.log(req);
-  res.json({ message: 'register success' });
-});
+router.get('/register', register);
 
-router.get('/login', (req: Request, res: Response) => {
-  console.log(req);
-  res.json({ message: 'login success' });
-});
+router.get('/login', login);
 
 export default router;
